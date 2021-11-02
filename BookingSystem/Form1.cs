@@ -16,5 +16,21 @@ namespace BookingSystem
         {
             InitializeComponent();
         }
+
+        private void btn_Staff_Click(object sender, EventArgs e)
+        {
+            frm_StaffOp frm_StaffOp = new frm_StaffOp();
+            frm_StaffOp.Show();
+        }
+
+        private void lbl_USWBookings_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_Student_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

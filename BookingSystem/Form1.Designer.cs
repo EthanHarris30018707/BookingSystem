@@ -43,6 +43,7 @@ namespace BookingSystem
             this.btn_Student.TabIndex = 1;
             this.btn_Student.Text = "Student";
             this.btn_Student.UseVisualStyleBackColor = true;
+            this.btn_Student.Click += new System.EventHandler(this.btn_Student_Click);
             // 
             // lbl_USWBookings
             // 
@@ -53,6 +54,7 @@ namespace BookingSystem
             this.lbl_USWBookings.Size = new System.Drawing.Size(196, 31);
             this.lbl_USWBookings.TabIndex = 2;
             this.lbl_USWBookings.Text = "USW Bookings";
+            this.lbl_USWBookings.Click += new System.EventHandler(this.lbl_USWBookings_Click);
             // 
             // btn_Staff
             // 
@@ -63,6 +65,7 @@ namespace BookingSystem
             this.btn_Staff.TabIndex = 3;
             this.btn_Staff.Text = "Staff";
             this.btn_Staff.UseVisualStyleBackColor = true;
+            this.btn_Staff.Click += new System.EventHandler(this.btn_Staff_Click);
             // 
             // frm_Main
             // 
