@@ -29,20 +29,61 @@ namespace BookingSystem
         /// </summary>
         private void InitializeComponent()
         {
+            this.btn_Student = new System.Windows.Forms.Button();
+            this.lbl_USWBookings = new System.Windows.Forms.Label();
+            this.btn_Staff = new System.Windows.Forms.Button();
             this.SuspendLayout();
+            // 
+            // btn_Student
+            // 
+            this.btn_Student.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Student.Location = new System.Drawing.Point(322, 164);
+            this.btn_Student.Name = "btn_Student";
+            this.btn_Student.Size = new System.Drawing.Size(170, 140);
+            this.btn_Student.TabIndex = 1;
+            this.btn_Student.Text = "Student";
+            this.btn_Student.UseVisualStyleBackColor = true;
+            // 
+            // lbl_USWBookings
+            // 
+            this.lbl_USWBookings.AutoSize = true;
+            this.lbl_USWBookings.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_USWBookings.Location = new System.Drawing.Point(161, 53);
+            this.lbl_USWBookings.Name = "lbl_USWBookings";
+            this.lbl_USWBookings.Size = new System.Drawing.Size(196, 31);
+            this.lbl_USWBookings.TabIndex = 2;
+            this.lbl_USWBookings.Text = "USW Bookings";
+            // 
+            // btn_Staff
+            // 
+            this.btn_Staff.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Staff.Location = new System.Drawing.Point(37, 164);
+            this.btn_Staff.Name = "btn_Staff";
+            this.btn_Staff.Size = new System.Drawing.Size(170, 140);
+            this.btn_Staff.TabIndex = 3;
+            this.btn_Staff.Text = "Staff";
+            this.btn_Staff.UseVisualStyleBackColor = true;
             // 
             // frm_Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(536, 429);
+            this.Controls.Add(this.btn_Staff);
+            this.Controls.Add(this.lbl_USWBookings);
+            this.Controls.Add(this.btn_Student);
             this.Name = "frm_Main";
             this.Text = "Main";
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
+
+        private System.Windows.Forms.Button btn_Student;
+        private System.Windows.Forms.Label lbl_USWBookings;
+        private System.Windows.Forms.Button btn_Staff;
     }
 }
 
