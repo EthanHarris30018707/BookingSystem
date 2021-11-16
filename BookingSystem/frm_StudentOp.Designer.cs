@@ -103,6 +103,7 @@ namespace BookingSystem
             this.btn_Create.TabIndex = 17;
             this.btn_Create.Text = "Create Account";
             this.btn_Create.UseVisualStyleBackColor = true;
+            this.btn_Create.Click += new System.EventHandler(this.btn_Create_Click);
             // 
             // frm_StudentOp
             // 

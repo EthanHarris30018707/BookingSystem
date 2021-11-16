@@ -21,6 +21,7 @@ namespace BookingSystem
         {
             frm_StaffOp frm_StaffOp = new frm_StaffOp();
             frm_StaffOp.Show();
+            this.Hide();
         }
 
         private void lbl_USWBookings_Click(object sender, EventArgs e)
@@ -32,6 +33,7 @@ namespace BookingSystem
         {
             frm_StudentOp frm_StudentOp = new frm_StudentOp();
             frm_StudentOp.Show();
+            this.Hide();
         }
     }
 }
