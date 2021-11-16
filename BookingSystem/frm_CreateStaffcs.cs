@@ -10,18 +10,11 @@ using System.Windows.Forms;
 
 namespace BookingSystem
 {
-    public partial class frm_StudentOp : Form
+    public partial class frm_CreateStaff : Form
     {
-        public frm_StudentOp()
+        public frm_CreateStaff()
         {
             InitializeComponent();
-        }
-
-        private void btn_Create_Click(object sender, EventArgs e)
-        {
-            frm_CreateStudent frm_CreateStudent = new frm_CreateStudent();
-            frm_CreateStudent.Show();
-            this.Close();
         }
     }
 }

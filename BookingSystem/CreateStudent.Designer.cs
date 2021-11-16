@@ -34,7 +34,7 @@ namespace BookingSystem
             this.txt_Name = new System.Windows.Forms.TextBox();
             this.lbl_Name = new System.Windows.Forms.Label();
             this.lbl_Login = new System.Windows.Forms.Label();
-            this.btn_Login = new System.Windows.Forms.Button();
+            this.btn_Enter = new System.Windows.Forms.Button();
             this.txt_Email = new System.Windows.Forms.TextBox();
             this.lbl_Email = new System.Windows.Forms.Label();
             this.txt_Address = new System.Windows.Forms.TextBox();
@@ -97,15 +97,15 @@ namespace BookingSystem
             this.lbl_Login.TabIndex = 21;
             this.lbl_Login.Text = "Create Account";
             // 
-            // btn_Login
+            // btn_Enter
             // 
-            this.btn_Login.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Login.Location = new System.Drawing.Point(247, 744);
-            this.btn_Login.Name = "btn_Login";
-            this.btn_Login.Size = new System.Drawing.Size(119, 78);
-            this.btn_Login.TabIndex = 22;
-            this.btn_Login.Text = "Login";
-            this.btn_Login.UseVisualStyleBackColor = true;
+            this.btn_Enter.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Enter.Location = new System.Drawing.Point(217, 591);
+            this.btn_Enter.Name = "btn_Enter";
+            this.btn_Enter.Size = new System.Drawing.Size(119, 78);
+            this.btn_Enter.TabIndex = 22;
+            this.btn_Enter.Text = "Enter";
+            this.btn_Enter.UseVisualStyleBackColor = true;
             // 
             // txt_Email
             // 
@@ -238,7 +238,7 @@ namespace BookingSystem
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(695, 897);
+            this.ClientSize = new System.Drawing.Size(560, 754);
             this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.txt_RePass);
             this.Controls.Add(this.label7);
@@ -253,7 +253,7 @@ namespace BookingSystem
             this.Controls.Add(this.lbl_Address);
             this.Controls.Add(this.txt_Email);
             this.Controls.Add(this.lbl_Email);
-            this.Controls.Add(this.btn_Login);
+            this.Controls.Add(this.btn_Enter);
             this.Controls.Add(this.lbl_Login);
             this.Controls.Add(this.txt_Password);
             this.Controls.Add(this.lbl_Password);
@@ -273,7 +273,7 @@ namespace BookingSystem
         private System.Windows.Forms.TextBox txt_Name;
         private System.Windows.Forms.Label lbl_Name;
         private System.Windows.Forms.Label lbl_Login;
-        private System.Windows.Forms.Button btn_Login;
+        private System.Windows.Forms.Button btn_Enter;
         private System.Windows.Forms.TextBox txt_Email;
         private System.Windows.Forms.Label lbl_Email;
         private System.Windows.Forms.TextBox txt_Address;

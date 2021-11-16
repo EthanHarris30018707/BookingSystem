@@ -19,7 +19,9 @@ namespace BookingSystem
 
         private void btn_Login_Click(object sender, EventArgs e)
         {
-
+            frm_StaffMain frm_StaffMain = new frm_StaffMain();
+            frm_StaffMain.Show();
+            this.Close();
         }
     }
 }

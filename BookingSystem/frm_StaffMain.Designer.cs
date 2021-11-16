@@ -33,6 +33,8 @@ namespace BookingSystem
             this.btn_EditA = new System.Windows.Forms.Button();
             this.btn_EditB = new System.Windows.Forms.Button();
             this.btn_Create = new System.Windows.Forms.Button();
+            this.btn_Out = new System.Windows.Forms.Button();
+            this.btn_End = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lbl_StaffMain
@@ -68,18 +70,43 @@ namespace BookingSystem
             // btn_Create
             // 
             this.btn_Create.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Create.Location = new System.Drawing.Point(213, 194);
+            this.btn_Create.Location = new System.Drawing.Point(204, 135);
             this.btn_Create.Name = "btn_Create";
             this.btn_Create.Size = new System.Drawing.Size(161, 78);
             this.btn_Create.TabIndex = 15;
             this.btn_Create.Text = "Create New Account";
             this.btn_Create.UseVisualStyleBackColor = true;
+            this.btn_Create.Click += new System.EventHandler(this.btn_Create_Click);
+            // 
+            // btn_Out
+            // 
+            this.btn_Out.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Out.Location = new System.Drawing.Point(204, 252);
+            this.btn_Out.Name = "btn_Out";
+            this.btn_Out.Size = new System.Drawing.Size(161, 78);
+            this.btn_Out.TabIndex = 16;
+            this.btn_Out.Text = "Sign Out";
+            this.btn_Out.UseVisualStyleBackColor = true;
+            this.btn_Out.Click += new System.EventHandler(this.btn_Out_Click);
+            // 
+            // btn_End
+            // 
+            this.btn_End.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_End.Location = new System.Drawing.Point(103, 346);
+            this.btn_End.Name = "btn_End";
+            this.btn_End.Size = new System.Drawing.Size(161, 78);
+            this.btn_End.TabIndex = 17;
+            this.btn_End.Text = "End Program";
+            this.btn_End.UseVisualStyleBackColor = true;
+            this.btn_End.Click += new System.EventHandler(this.btn_End_Click);
             // 
             // frm_StaffMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(410, 395);
+            this.ClientSize = new System.Drawing.Size(410, 464);
+            this.Controls.Add(this.btn_End);
+            this.Controls.Add(this.btn_Out);
             this.Controls.Add(this.btn_Create);
             this.Controls.Add(this.btn_EditB);
             this.Controls.Add(this.btn_EditA);
@@ -97,5 +124,7 @@ namespace BookingSystem
         private System.Windows.Forms.Button btn_EditA;
         private System.Windows.Forms.Button btn_EditB;
         private System.Windows.Forms.Button btn_Create;
+        private System.Windows.Forms.Button btn_Out;
+        private System.Windows.Forms.Button btn_End;
     }
 }
