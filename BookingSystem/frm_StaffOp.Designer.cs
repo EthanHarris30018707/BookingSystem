@@ -51,11 +51,11 @@ namespace BookingSystem
             // 
             this.lbl_Login.AutoSize = true;
             this.lbl_Login.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Login.Location = new System.Drawing.Point(233, 67);
+            this.lbl_Login.Location = new System.Drawing.Point(208, 72);
             this.lbl_Login.Name = "lbl_Login";
-            this.lbl_Login.Size = new System.Drawing.Size(89, 31);
+            this.lbl_Login.Size = new System.Drawing.Size(153, 31);
             this.lbl_Login.TabIndex = 5;
-            this.lbl_Login.Text = "Log In";
+            this.lbl_Login.Text = "Staff Log In";
             // 
             // lbl_Name
             // 

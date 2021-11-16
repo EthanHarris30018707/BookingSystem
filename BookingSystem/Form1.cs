@@ -30,7 +30,8 @@ namespace BookingSystem
 
         private void btn_Student_Click(object sender, EventArgs e)
         {
-
+            frm_StudentOp frm_StudentOp = new frm_StudentOp();
+            frm_StudentOp.Show();
         }
     }
 }

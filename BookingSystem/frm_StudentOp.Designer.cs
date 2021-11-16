@@ -88,11 +88,11 @@ namespace BookingSystem
             // 
             this.lbl_Login.AutoSize = true;
             this.lbl_Login.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Login.Location = new System.Drawing.Point(153, 77);
+            this.lbl_Login.Location = new System.Drawing.Point(193, 67);
             this.lbl_Login.Name = "lbl_Login";
-            this.lbl_Login.Size = new System.Drawing.Size(285, 31);
+            this.lbl_Login.Size = new System.Drawing.Size(202, 62);
             this.lbl_Login.TabIndex = 11;
-            this.lbl_Login.Text = "Log In/Create Account";
+            this.lbl_Login.Text = "Student Log In/\r\nCreate Account";
             // 
             // btn_Create
             // 
@@ -108,7 +108,7 @@ namespace BookingSystem
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(607, 554);
+            this.ClientSize = new System.Drawing.Size(544, 465);
             this.Controls.Add(this.btn_Create);
             this.Controls.Add(this.txt_Password);
             this.Controls.Add(this.lbl_Password);
