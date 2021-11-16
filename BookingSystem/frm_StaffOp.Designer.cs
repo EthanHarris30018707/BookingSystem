@@ -35,6 +35,7 @@ namespace BookingSystem
             this.txt_Name = new System.Windows.Forms.TextBox();
             this.txt_Password = new System.Windows.Forms.TextBox();
             this.lbl_Password = new System.Windows.Forms.Label();
+            this.btn_Back = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btn_Login
@@ -94,11 +95,23 @@ namespace BookingSystem
             this.lbl_Password.TabIndex = 9;
             this.lbl_Password.Text = "Password";
             // 
+            // btn_Back
+            // 
+            this.btn_Back.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Back.Location = new System.Drawing.Point(459, 390);
+            this.btn_Back.Name = "btn_Back";
+            this.btn_Back.Size = new System.Drawing.Size(85, 53);
+            this.btn_Back.TabIndex = 60;
+            this.btn_Back.Text = "Back";
+            this.btn_Back.UseVisualStyleBackColor = true;
+            this.btn_Back.Click += new System.EventHandler(this.btn_Back_Click);
+            // 
             // frm_StaffOp
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(556, 455);
+            this.Controls.Add(this.btn_Back);
             this.Controls.Add(this.txt_Password);
             this.Controls.Add(this.lbl_Password);
             this.Controls.Add(this.txt_Name);
@@ -120,5 +133,6 @@ namespace BookingSystem
         private System.Windows.Forms.TextBox txt_Name;
         private System.Windows.Forms.TextBox txt_Password;
         private System.Windows.Forms.Label lbl_Password;
+        private System.Windows.Forms.Button btn_Back;
     }
 }

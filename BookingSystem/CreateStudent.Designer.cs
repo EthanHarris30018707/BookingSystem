@@ -49,6 +49,7 @@ namespace BookingSystem
             this.txt_RePass = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.btn_Back = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // txt_Password
@@ -234,11 +235,23 @@ namespace BookingSystem
             this.dateTimePicker1.TabIndex = 38;
             this.dateTimePicker1.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
             // 
+            // btn_Back
+            // 
+            this.btn_Back.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Back.Location = new System.Drawing.Point(463, 689);
+            this.btn_Back.Name = "btn_Back";
+            this.btn_Back.Size = new System.Drawing.Size(85, 53);
+            this.btn_Back.TabIndex = 60;
+            this.btn_Back.Text = "Back";
+            this.btn_Back.UseVisualStyleBackColor = true;
+            this.btn_Back.Click += new System.EventHandler(this.btn_Back_Click);
+            // 
             // frm_CreateStudent
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(560, 754);
+            this.Controls.Add(this.btn_Back);
             this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.txt_RePass);
             this.Controls.Add(this.label7);
@@ -288,5 +301,6 @@ namespace BookingSystem
         private System.Windows.Forms.TextBox txt_RePass;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.Button btn_Back;
     }
 }

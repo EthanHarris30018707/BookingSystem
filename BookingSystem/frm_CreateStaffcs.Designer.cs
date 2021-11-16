@@ -47,6 +47,7 @@ namespace BookingSystem
             this.lbl_Password = new System.Windows.Forms.Label();
             this.txt_Name = new System.Windows.Forms.TextBox();
             this.lbl_Name = new System.Windows.Forms.Label();
+            this.btn_Back = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // dateTimePicker1
@@ -160,7 +161,7 @@ namespace BookingSystem
             // btn_Enter
             // 
             this.btn_Enter.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Enter.Location = new System.Drawing.Point(228, 590);
+            this.btn_Enter.Location = new System.Drawing.Point(175, 579);
             this.btn_Enter.Name = "btn_Enter";
             this.btn_Enter.Size = new System.Drawing.Size(119, 78);
             this.btn_Enter.TabIndex = 44;
@@ -213,11 +214,23 @@ namespace BookingSystem
             this.lbl_Name.TabIndex = 39;
             this.lbl_Name.Text = "Name";
             // 
+            // btn_Back
+            // 
+            this.btn_Back.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Back.Location = new System.Drawing.Point(443, 674);
+            this.btn_Back.Name = "btn_Back";
+            this.btn_Back.Size = new System.Drawing.Size(85, 53);
+            this.btn_Back.TabIndex = 59;
+            this.btn_Back.Text = "Back";
+            this.btn_Back.UseVisualStyleBackColor = true;
+            this.btn_Back.Click += new System.EventHandler(this.btn_Back_Click);
+            // 
             // frm_CreateStaff
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(566, 763);
+            this.Controls.Add(this.btn_Back);
             this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.txt_RePass);
             this.Controls.Add(this.label7);
@@ -263,5 +276,6 @@ namespace BookingSystem
         private System.Windows.Forms.Label lbl_Password;
         private System.Windows.Forms.TextBox txt_Name;
         private System.Windows.Forms.Label lbl_Name;
+        private System.Windows.Forms.Button btn_Back;
     }
 }

@@ -16,5 +16,12 @@ namespace BookingSystem
         {
             InitializeComponent();
         }
+
+        private void btn_Back_Click(object sender, EventArgs e)
+        {
+            frm_StaffMain frm_StaffMain = new frm_StaffMain();
+            frm_StaffMain.Show();
+            this.Close();
+        }
     }
 }
