@@ -1,0 +1,101 @@
+﻿
+namespace BookingSystem
+{
+    partial class frm_StaffMain
+    {
+        /// <summary>
+        /// Required designer variable.
+        /// </summary>
+        private System.ComponentModel.IContainer components = null;
+
+        /// <summary>
+        /// Clean up any resources being used.
+        /// </summary>
+        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing && (components != null))
+            {
+                components.Dispose();
+            }
+            base.Dispose(disposing);
+        }
+
+        #region Windows Form Designer generated code
+
+        /// <summary>
+        /// Required method for Designer support - do not modify
+        /// the contents of this method with the code editor.
+        /// </summary>
+        private void InitializeComponent()
+        {
+            this.lbl_StaffMain = new System.Windows.Forms.Label();
+            this.btn_EditA = new System.Windows.Forms.Button();
+            this.btn_EditB = new System.Windows.Forms.Button();
+            this.btn_Create = new System.Windows.Forms.Button();
+            this.SuspendLayout();
+            // 
+            // lbl_StaffMain
+            // 
+            this.lbl_StaffMain.AutoSize = true;
+            this.lbl_StaffMain.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_StaffMain.Location = new System.Drawing.Point(97, 42);
+            this.lbl_StaffMain.Name = "lbl_StaffMain";
+            this.lbl_StaffMain.Size = new System.Drawing.Size(210, 31);
+            this.lbl_StaffMain.TabIndex = 12;
+            this.lbl_StaffMain.Text = "Staff Main Menu";
+            // 
+            // btn_EditA
+            // 
+            this.btn_EditA.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_EditA.Location = new System.Drawing.Point(43, 135);
+            this.btn_EditA.Name = "btn_EditA";
+            this.btn_EditA.Size = new System.Drawing.Size(119, 78);
+            this.btn_EditA.TabIndex = 13;
+            this.btn_EditA.Text = "Edit Account";
+            this.btn_EditA.UseVisualStyleBackColor = true;
+            // 
+            // btn_EditB
+            // 
+            this.btn_EditB.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_EditB.Location = new System.Drawing.Point(43, 252);
+            this.btn_EditB.Name = "btn_EditB";
+            this.btn_EditB.Size = new System.Drawing.Size(119, 78);
+            this.btn_EditB.TabIndex = 14;
+            this.btn_EditB.Text = "Edit Books";
+            this.btn_EditB.UseVisualStyleBackColor = true;
+            // 
+            // btn_Create
+            // 
+            this.btn_Create.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Create.Location = new System.Drawing.Point(213, 194);
+            this.btn_Create.Name = "btn_Create";
+            this.btn_Create.Size = new System.Drawing.Size(161, 78);
+            this.btn_Create.TabIndex = 15;
+            this.btn_Create.Text = "Create New Account";
+            this.btn_Create.UseVisualStyleBackColor = true;
+            // 
+            // frm_StaffMain
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(410, 395);
+            this.Controls.Add(this.btn_Create);
+            this.Controls.Add(this.btn_EditB);
+            this.Controls.Add(this.btn_EditA);
+            this.Controls.Add(this.lbl_StaffMain);
+            this.Name = "frm_StaffMain";
+            this.Text = "frm_StaffMain";
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
+        }
+
+        #endregion
+
+        private System.Windows.Forms.Label lbl_StaffMain;
+        private System.Windows.Forms.Button btn_EditA;
+        private System.Windows.Forms.Button btn_EditB;
+        private System.Windows.Forms.Button btn_Create;
+    }
+}
