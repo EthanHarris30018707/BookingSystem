@@ -23,5 +23,12 @@ namespace BookingSystem
             frm_CreateStudent.Show();
             this.Close();
         }
+
+        private void btn_Login_Click(object sender, EventArgs e)
+        {
+            frm_StudentMenu frm_StudentMenu = new frm_StudentMenu();
+            frm_StudentMenu.Show();
+            this.Close();
+        }
     }
 }
