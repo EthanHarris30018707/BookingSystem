@@ -32,6 +32,7 @@ namespace BookingSystem
             this.btn_Student = new System.Windows.Forms.Button();
             this.lbl_USWBookings = new System.Windows.Forms.Label();
             this.btn_Staff = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btn_Student
@@ -67,11 +68,21 @@ namespace BookingSystem
             this.btn_Staff.UseVisualStyleBackColor = true;
             this.btn_Staff.Click += new System.EventHandler(this.btn_Staff_Click);
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(188, 354);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(125, 47);
+            this.button1.TabIndex = 4;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
             // frm_Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(536, 429);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.btn_Staff);
             this.Controls.Add(this.lbl_USWBookings);
             this.Controls.Add(this.btn_Student);
@@ -87,6 +98,7 @@ namespace BookingSystem
         private System.Windows.Forms.Button btn_Student;
         private System.Windows.Forms.Label lbl_USWBookings;
         private System.Windows.Forms.Button btn_Staff;
+        private System.Windows.Forms.Button button1;
     }
 }
 
