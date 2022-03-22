@@ -167,6 +167,7 @@ namespace BookingSystem
             this.btn_Enter.TabIndex = 44;
             this.btn_Enter.Text = "Enter";
             this.btn_Enter.UseVisualStyleBackColor = true;
+            this.btn_Enter.Click += new System.EventHandler(this.btn_Enter_Click);
             // 
             // lbl_Login
             // 

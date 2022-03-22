@@ -23,5 +23,10 @@ namespace BookingSystem
             frm_StaffMain.Show();
             this.Close();
         }
+
+        private void btn_Enter_Click(object sender, EventArgs e)
+        {
+            
+        }
     }
 }
