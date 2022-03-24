@@ -133,6 +133,7 @@ namespace BookingSystem
             this.Controls.Add(this.lbl_Login);
             this.Name = "frm_StudentOp";
             this.Text = "frm_StudentOp";
+            this.Load += new System.EventHandler(this.frm_StudentOp_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

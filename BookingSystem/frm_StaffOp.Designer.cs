@@ -120,6 +120,7 @@ namespace BookingSystem
             this.Controls.Add(this.lbl_Login);
             this.Name = "frm_StaffOp";
             this.Text = "frm_StaffOp";
+            this.Load += new System.EventHandler(this.frm_StaffOp_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

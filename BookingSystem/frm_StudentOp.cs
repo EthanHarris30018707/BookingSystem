@@ -26,9 +26,24 @@ namespace BookingSystem
 
         private void btn_Login_Click(object sender, EventArgs e)
         {
-            frm_StudentMenu frm_StudentMenu = new frm_StudentMenu();
-            frm_StudentMenu.Show();
-            this.Close();
+            if (txt_Name.Text == "Admin")
+            {
+                if (txt_Password.Text == "Admin")
+                {
+                    new frm_StudentMenu().Show();
+                    this.Close();
+                }
+                else
+                {
+                    MessageBox.Show("Error; Please enter the correct Information");
+
+                }
+
+            }
+            else
+            {
+                MessageBox.Show("Error;Please enter the correct Information");
+            }
         }
 
         private void btn_Back_Click(object sender, EventArgs e)
@@ -36,6 +51,11 @@ namespace BookingSystem
             frm_Main frm_Main = new frm_Main();
             frm_Main.Show();
             this.Close();
+        }
+
+        private void frm_StudentOp_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
