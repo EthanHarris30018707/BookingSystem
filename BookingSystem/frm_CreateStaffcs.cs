@@ -26,9 +26,13 @@ namespace BookingSystem
 
         private void btn_Enter_Click(object sender, EventArgs e)
         {
-            this.Validate();
-            this.staffBindingSource.EndEdit();
-            this.tableAdapterManager.UpdateAll(this.database1DataSet);
+            if (this.Validate() & passwordTextBox.Text == reTypePasswordTextbox.Text)
+            {
+                passwordTextBox.Text = Utility.EncryptDecrypt(passwordTextBox.Text);
+                reTypePasswordTextbox.Text = Utility.EncryptDecrypt(passwordTextBox.Text);
+                this.staffBindingSource.EndEdit();
+                this.tableAdapterManager.UpdateAll(this.database1DataSet);
+            }
         }
 
         private void staffBindingNavigatorSaveItem_Click(object sender, EventArgs e)
@@ -53,5 +57,17 @@ namespace BookingSystem
             this.staffTableAdapter.Fill(this.database1DataSet.Staff);
 
         }
+
+        private void staffBindingSource_AddingNew(object sender, AddingNewEventArgs e)
+        {
+            string newID = staffDataGridView.Rows.Count.ToString();
+            while(newID.Length <10)
+            {
+                newID = "0" + newID;
+            }
+            staffDataGridView.Rows[staffDataGridView.Rows.Count - 1].Cells[0].Value = newID;
+            staffDataGridView.Refresh();
+        }
+
     }
 }
