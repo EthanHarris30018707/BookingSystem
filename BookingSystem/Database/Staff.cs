@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
@@ -10,7 +11,7 @@ namespace BookingSystem.Database
     public class Staff: BindableBase
     {
 
-        private static List<Staff> staffs;
+        private static List<Staff> staffs = new List<Staff>();
         public static List<Staff> Staffs
         {
             get
@@ -87,11 +88,12 @@ namespace BookingSystem.Database
         public bool Save()
         {
             try
-            {                
-                using (SqlConnection connection = new SqlConnection(Constants.CONNECTION_STRING))
+            {   
+                string connection_string = ConfigurationManager.ConnectionStrings[Constants.CONNECTION_STRING].ConnectionString;
+                using (SqlConnection connection = new SqlConnection(connection_string))
                 {
                     connection.Open();
-                    using (SqlCommand command = new SqlCommand("sp_createcalibration", connection))
+                    using (SqlCommand command = new SqlCommand("procedureCreateStaff", connection))
                     {
                         command.CommandType = System.Data.CommandType.StoredProcedure;
                         command.Parameters.AddWithValue("@paramStaffId", StaffId);
@@ -100,17 +102,23 @@ namespace BookingSystem.Database
                         command.Parameters.AddWithValue("@paramPostcode", Postcode);
                         command.Parameters.AddWithValue("@paramPhone", Phone);
                         command.Parameters.AddWithValue("@paramDateOfBirth", DateOfBirth);
-                        command.Parameters.AddWithValue("@paramPassword", Password.EncryptDecrypt());
+                        command.Parameters.AddWithValue("@paramPassword", Password.Encrypt());
 
                         int ret = (int)command.ExecuteScalar();
                         return ret == 1;
                     }
                 }
             }
-            catch 
+            catch(Exception ex) 
             {
+                Console.WriteLine(ex);
                 return false;
             }
+        }
+
+        public override string ToString()
+        {
+            return $"{StaffId}: {Name}";
         }
     }
 }

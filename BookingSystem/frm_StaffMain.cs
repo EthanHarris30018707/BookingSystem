@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BookingSystem.Logon;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -19,8 +20,11 @@ namespace BookingSystem
 
         private void btn_Out_Click(object sender, EventArgs e)
         {
+            //Set the logged on staff to null
+            Cookie.Instance.LoggedStaff = null;
+
             frm_Main frm_Main = new frm_Main();
-            frm_Main.Show();
+            frm_Main.Show();            
             this.Close();
         }
 

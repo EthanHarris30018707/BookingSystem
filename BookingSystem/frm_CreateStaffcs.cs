@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BookingSystem.Database;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,7 @@ namespace BookingSystem
         public frm_CreateStaff()
         {
             InitializeComponent();
+            txtStaffId.Text = Utility.GeneratedNextStaffId();
         }
 
         private void btn_Back_Click(object sender, EventArgs e)
@@ -24,49 +26,58 @@ namespace BookingSystem
             this.Close();
         }
 
+        private int ValidateInformation()
+        {
+            //Phone number should be length of 11 and convertible to int
+            if (txtPhone.Text.Length != 11 && !int.TryParse(txtPhone.Text, out _))
+            {
+                return Constants.INVALID_PHONE_NUMBER_ERROR;
+            }
+            //Name should be at least length 2
+            if (txtName.Text.Length < 2)
+            {
+                return Constants.INVALID_NAME_ERROR;
+            }
+            //Staff should be at least 18 years old
+            if ((DateTime.Now - dtpDateOfBirth.Value).TotalDays < 18 * 365)
+            {
+                return Constants.INVALID_DOB_ERROR;
+            }
+            if (txtPassword.Text != txtPasswordRetype.Text)
+            {
+                return Constants.PASSWORD_AND_RETYPE_NOT_MATCHING;
+            }
+            return Constants.NO_ERROR;
+        }
+
         private void btn_Enter_Click(object sender, EventArgs e)
         {
-            if (this.Validate() & passwordTextBox.Text == reTypePasswordTextbox.Text)
+            int error = ValidateInformation();
+            if (error != Constants.NO_ERROR)
             {
-                passwordTextBox.Text = Utility.EncryptDecrypt(passwordTextBox.Text);
-                reTypePasswordTextbox.Text = Utility.EncryptDecrypt(passwordTextBox.Text);
-                this.staffBindingSource.EndEdit();
-                this.tableAdapterManager.UpdateAll(this.database1DataSet);
+                MessageBox.Show($"{error.ErrorToMessage()}. Please correct and try again.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
             }
-        }
-
-        private void staffBindingNavigatorSaveItem_Click(object sender, EventArgs e)
-        {
-            this.Validate();
-            this.staffBindingSource.EndEdit();
-            this.tableAdapterManager.UpdateAll(this.database1DataSet);
-
-        }
-
-        private void staffBindingNavigatorSaveItem_Click_1(object sender, EventArgs e)
-        {
-            this.Validate();
-            this.staffBindingSource.EndEdit();
-            this.tableAdapterManager.UpdateAll(this.database1DataSet);
-
-        }
-
-        private void frm_CreateStaff_Load(object sender, EventArgs e)
-        {
-            // TODO: This line of code loads data into the 'database1DataSet.Staff' table. You can move, or remove it, as needed.
-            this.staffTableAdapter.Fill(this.database1DataSet.Staff);
-
-        }
-
-        private void staffBindingSource_AddingNew(object sender, AddingNewEventArgs e)
-        {
-            string newID = staffDataGridView.Rows.Count.ToString();
-            while(newID.Length <10)
+            //Create the staff
+            Staff staff = new Staff()
             {
-                newID = "0" + newID;
+                StaffId = txtStaffId.Text,
+                Name = txtName.Text,
+                Phone = txtPhone.Text,
+                Address = txtAddress.Text,
+                DateOfBirth = dtpDateOfBirth.Value,
+                Password = txtPassword.Text.Encrypt(),
+                Postcode = txtPostcode.Text                
+            };
+            if(staff.Save())
+            {
+                MessageBox.Show($"{staff} successfully saved", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                this.Close();
             }
-            staffDataGridView.Rows[staffDataGridView.Rows.Count - 1].Cells[0].Value = newID;
-            staffDataGridView.Refresh();
+            else
+            {
+                MessageBox.Show($"error saving {staff}. Please check the information and try again", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
         }
 
     }

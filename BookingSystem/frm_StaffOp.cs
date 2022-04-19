@@ -1,4 +1,6 @@
-﻿using System;
+﻿using BookingSystem.Database;
+using BookingSystem.Logon;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -19,24 +21,24 @@ namespace BookingSystem
 
         private void btn_Login_Click(object sender, EventArgs e)
         {
-            if (txt_Name.Text == "Admin")
+            //Get the staff with the enterred username
+            Staff enteredStaff = Staff.Staffs.Where((s) => s.StaffId == txt_StaffId.Text).FirstOrDefault();
+            if(enteredStaff == null)
             {
-                if (txt_Password.Text == "Admin")
-                {
-                    new frm_StaffMain().Show();
-                    this.Close();
-                }
-                else
-                {
-                    MessageBox.Show("Error; Please enter the correct Information");
-
-                }
-
+                MessageBox.Show("Staff with enterred ID does not exist. Please try again", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            if(txt_Password.Text.Encrypt() == enteredStaff.Password)
+            {
+                //Correct credentials enterred
+                Cookie.Instance.LoggedStaff = enteredStaff;
+                (new frm_StaffMain()).Show();
+                this.Close();
             }
             else
             {
-                MessageBox.Show("Error;Please enter the correct Information");
-            }
+                MessageBox.Show("Incorrect username and/or password enterred. Please try again", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }            
         }
 
         private void btn_Back_Click(object sender, EventArgs e)

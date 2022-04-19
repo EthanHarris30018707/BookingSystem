@@ -29,62 +29,31 @@ namespace BookingSystem
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_CreateStaff));
             this.label7 = new System.Windows.Forms.Label();
             this.lbl_DOB = new System.Windows.Forms.Label();
             this.lbl_Phone = new System.Windows.Forms.Label();
             this.lbl_Postcode = new System.Windows.Forms.Label();
             this.lbl_Address = new System.Windows.Forms.Label();
             this.btn_Enter = new System.Windows.Forms.Button();
-            this.lbl_Login = new System.Windows.Forms.Label();
             this.lbl_Password = new System.Windows.Forms.Label();
             this.lbl_Name = new System.Windows.Forms.Label();
             this.btn_Back = new System.Windows.Forms.Button();
-            this.staffBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
-            this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
-            this.staffBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.database1DataSet = new BookingSystem.Database1DataSet();
-            this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
-            this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorMovePreviousItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorSeparator = new System.Windows.Forms.ToolStripSeparator();
-            this.bindingNavigatorPositionItem = new System.Windows.Forms.ToolStripTextBox();
-            this.bindingNavigatorSeparator1 = new System.Windows.Forms.ToolStripSeparator();
-            this.bindingNavigatorMoveNextItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.staffBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
-            this.nameTextBox = new System.Windows.Forms.TextBox();
-            this.addressTextBox = new System.Windows.Forms.TextBox();
-            this.postcodeTextBox = new System.Windows.Forms.TextBox();
-            this.phoneTextBox = new System.Windows.Forms.TextBox();
-            this.dOBDateTimePicker = new System.Windows.Forms.DateTimePicker();
-            this.passwordTextBox = new System.Windows.Forms.TextBox();
-            this.staffDataGridView = new System.Windows.Forms.DataGridView();
-            this.StaffId = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DateOfBirth = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.reTypePasswordTextbox = new System.Windows.Forms.TextBox();
-            this.staffTableAdapter = new BookingSystem.Database1DataSetTableAdapters.StaffTableAdapter();
-            this.tableAdapterManager = new BookingSystem.Database1DataSetTableAdapters.TableAdapterManager();
-            ((System.ComponentModel.ISupportInitialize)(this.staffBindingNavigator)).BeginInit();
-            this.staffBindingNavigator.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.staffBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.database1DataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.staffDataGridView)).BeginInit();
+            this.txtName = new System.Windows.Forms.TextBox();
+            this.txtAddress = new System.Windows.Forms.TextBox();
+            this.txtPostcode = new System.Windows.Forms.TextBox();
+            this.txtPhone = new System.Windows.Forms.TextBox();
+            this.dtpDateOfBirth = new System.Windows.Forms.DateTimePicker();
+            this.txtPassword = new System.Windows.Forms.TextBox();
+            this.txtPasswordRetype = new System.Windows.Forms.TextBox();
+            this.txtStaffId = new System.Windows.Forms.TextBox();
+            this.lblStaffId = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label7
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(56, 517);
+            this.label7.Location = new System.Drawing.Point(30, 392);
             this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(98, 50);
@@ -95,7 +64,7 @@ namespace BookingSystem
             // 
             this.lbl_DOB.AutoSize = true;
             this.lbl_DOB.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_DOB.Location = new System.Drawing.Point(56, 358);
+            this.lbl_DOB.Location = new System.Drawing.Point(30, 291);
             this.lbl_DOB.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_DOB.Name = "lbl_DOB";
             this.lbl_DOB.Size = new System.Drawing.Size(55, 25);
@@ -106,7 +75,7 @@ namespace BookingSystem
             // 
             this.lbl_Phone.AutoSize = true;
             this.lbl_Phone.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Phone.Location = new System.Drawing.Point(56, 306);
+            this.lbl_Phone.Location = new System.Drawing.Point(30, 239);
             this.lbl_Phone.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_Phone.Name = "lbl_Phone";
             this.lbl_Phone.Size = new System.Drawing.Size(69, 25);
@@ -117,7 +86,7 @@ namespace BookingSystem
             // 
             this.lbl_Postcode.AutoSize = true;
             this.lbl_Postcode.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Postcode.Location = new System.Drawing.Point(56, 258);
+            this.lbl_Postcode.Location = new System.Drawing.Point(30, 191);
             this.lbl_Postcode.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_Postcode.Name = "lbl_Postcode";
             this.lbl_Postcode.Size = new System.Drawing.Size(94, 25);
@@ -128,7 +97,7 @@ namespace BookingSystem
             // 
             this.lbl_Address.AutoSize = true;
             this.lbl_Address.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Address.Location = new System.Drawing.Point(56, 209);
+            this.lbl_Address.Location = new System.Drawing.Point(30, 142);
             this.lbl_Address.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_Address.Name = "lbl_Address";
             this.lbl_Address.Size = new System.Drawing.Size(85, 25);
@@ -138,7 +107,7 @@ namespace BookingSystem
             // btn_Enter
             // 
             this.btn_Enter.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Enter.Location = new System.Drawing.Point(155, 636);
+            this.btn_Enter.Location = new System.Drawing.Point(35, 480);
             this.btn_Enter.Margin = new System.Windows.Forms.Padding(4);
             this.btn_Enter.Name = "btn_Enter";
             this.btn_Enter.Size = new System.Drawing.Size(159, 51);
@@ -147,22 +116,11 @@ namespace BookingSystem
             this.btn_Enter.UseVisualStyleBackColor = true;
             this.btn_Enter.Click += new System.EventHandler(this.btn_Enter_Click);
             // 
-            // lbl_Login
-            // 
-            this.lbl_Login.AutoSize = true;
-            this.lbl_Login.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Login.Location = new System.Drawing.Point(53, 39);
-            this.lbl_Login.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lbl_Login.Name = "lbl_Login";
-            this.lbl_Login.Size = new System.Drawing.Size(251, 39);
-            this.lbl_Login.TabIndex = 43;
-            this.lbl_Login.Text = "Create Account";
-            // 
             // lbl_Password
             // 
             this.lbl_Password.AutoSize = true;
             this.lbl_Password.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Password.Location = new System.Drawing.Point(56, 468);
+            this.lbl_Password.Location = new System.Drawing.Point(30, 343);
             this.lbl_Password.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_Password.Name = "lbl_Password";
             this.lbl_Password.Size = new System.Drawing.Size(98, 25);
@@ -173,7 +131,7 @@ namespace BookingSystem
             // 
             this.lbl_Name.AutoSize = true;
             this.lbl_Name.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Name.Location = new System.Drawing.Point(56, 151);
+            this.lbl_Name.Location = new System.Drawing.Point(30, 84);
             this.lbl_Name.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_Name.Name = "lbl_Name";
             this.lbl_Name.Size = new System.Drawing.Size(64, 25);
@@ -183,319 +141,107 @@ namespace BookingSystem
             // btn_Back
             // 
             this.btn_Back.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Back.Location = new System.Drawing.Point(875, 636);
+            this.btn_Back.Location = new System.Drawing.Point(249, 480);
             this.btn_Back.Margin = new System.Windows.Forms.Padding(4);
             this.btn_Back.Name = "btn_Back";
             this.btn_Back.Size = new System.Drawing.Size(176, 51);
             this.btn_Back.TabIndex = 59;
-            this.btn_Back.Text = "Back";
+            this.btn_Back.Text = "Close";
             this.btn_Back.UseVisualStyleBackColor = true;
             this.btn_Back.Click += new System.EventHandler(this.btn_Back_Click);
             // 
-            // staffBindingNavigator
+            // txtName
             // 
-            this.staffBindingNavigator.AddNewItem = this.bindingNavigatorAddNewItem;
-            this.staffBindingNavigator.BindingSource = this.staffBindingSource;
-            this.staffBindingNavigator.CountItem = this.bindingNavigatorCountItem;
-            this.staffBindingNavigator.DeleteItem = this.bindingNavigatorDeleteItem;
-            this.staffBindingNavigator.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.staffBindingNavigator.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.bindingNavigatorMoveFirstItem,
-            this.bindingNavigatorMovePreviousItem,
-            this.bindingNavigatorSeparator,
-            this.bindingNavigatorPositionItem,
-            this.bindingNavigatorCountItem,
-            this.bindingNavigatorSeparator1,
-            this.bindingNavigatorMoveNextItem,
-            this.bindingNavigatorMoveLastItem,
-            this.bindingNavigatorSeparator2,
-            this.bindingNavigatorAddNewItem,
-            this.bindingNavigatorDeleteItem,
-            this.staffBindingNavigatorSaveItem});
-            this.staffBindingNavigator.Location = new System.Drawing.Point(0, 0);
-            this.staffBindingNavigator.MoveFirstItem = this.bindingNavigatorMoveFirstItem;
-            this.staffBindingNavigator.MoveLastItem = this.bindingNavigatorMoveLastItem;
-            this.staffBindingNavigator.MoveNextItem = this.bindingNavigatorMoveNextItem;
-            this.staffBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
-            this.staffBindingNavigator.Name = "staffBindingNavigator";
-            this.staffBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
-            this.staffBindingNavigator.Size = new System.Drawing.Size(1509, 27);
-            this.staffBindingNavigator.TabIndex = 60;
-            this.staffBindingNavigator.Text = "bindingNavigator1";
+            this.txtName.Location = new System.Drawing.Point(178, 88);
+            this.txtName.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtName.Name = "txtName";
+            this.txtName.Size = new System.Drawing.Size(255, 22);
+            this.txtName.TabIndex = 61;
             // 
-            // bindingNavigatorAddNewItem
+            // txtAddress
             // 
-            this.bindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorAddNewItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem.Image")));
-            this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
-            this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(29, 24);
-            this.bindingNavigatorAddNewItem.Text = "Add new";
+            this.txtAddress.Location = new System.Drawing.Point(178, 142);
+            this.txtAddress.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtAddress.Name = "txtAddress";
+            this.txtAddress.Size = new System.Drawing.Size(255, 22);
+            this.txtAddress.TabIndex = 62;
             // 
-            // staffBindingSource
+            // txtPostcode
             // 
-            this.staffBindingSource.DataMember = "Staff";
-            this.staffBindingSource.DataSource = this.database1DataSet;
-            this.staffBindingSource.AddingNew += new System.ComponentModel.AddingNewEventHandler(this.staffBindingSource_AddingNew);
+            this.txtPostcode.Location = new System.Drawing.Point(178, 191);
+            this.txtPostcode.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtPostcode.Name = "txtPostcode";
+            this.txtPostcode.Size = new System.Drawing.Size(255, 22);
+            this.txtPostcode.TabIndex = 63;
             // 
-            // database1DataSet
+            // txtPhone
             // 
-            this.database1DataSet.DataSetName = "Database1DataSet";
-            this.database1DataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this.txtPhone.Location = new System.Drawing.Point(178, 241);
+            this.txtPhone.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtPhone.Name = "txtPhone";
+            this.txtPhone.Size = new System.Drawing.Size(255, 22);
+            this.txtPhone.TabIndex = 64;
             // 
-            // bindingNavigatorCountItem
+            // dtpDateOfBirth
             // 
-            this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
-            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(45, 24);
-            this.bindingNavigatorCountItem.Text = "of {0}";
-            this.bindingNavigatorCountItem.ToolTipText = "Total number of items";
+            this.dtpDateOfBirth.Location = new System.Drawing.Point(178, 295);
+            this.dtpDateOfBirth.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dtpDateOfBirth.Name = "dtpDateOfBirth";
+            this.dtpDateOfBirth.Size = new System.Drawing.Size(255, 22);
+            this.dtpDateOfBirth.TabIndex = 65;
             // 
-            // bindingNavigatorDeleteItem
+            // txtPassword
             // 
-            this.bindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorDeleteItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem.Image")));
-            this.bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
-            this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(29, 24);
-            this.bindingNavigatorDeleteItem.Text = "Delete";
+            this.txtPassword.Location = new System.Drawing.Point(178, 343);
+            this.txtPassword.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtPassword.Name = "txtPassword";
+            this.txtPassword.PasswordChar = '*';
+            this.txtPassword.Size = new System.Drawing.Size(255, 22);
+            this.txtPassword.TabIndex = 66;
             // 
-            // bindingNavigatorMoveFirstItem
+            // txtPasswordRetype
             // 
-            this.bindingNavigatorMoveFirstItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorMoveFirstItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveFirstItem.Image")));
-            this.bindingNavigatorMoveFirstItem.Name = "bindingNavigatorMoveFirstItem";
-            this.bindingNavigatorMoveFirstItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveFirstItem.Size = new System.Drawing.Size(29, 24);
-            this.bindingNavigatorMoveFirstItem.Text = "Move first";
+            this.txtPasswordRetype.Location = new System.Drawing.Point(178, 407);
+            this.txtPasswordRetype.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtPasswordRetype.Name = "txtPasswordRetype";
+            this.txtPasswordRetype.PasswordChar = '*';
+            this.txtPasswordRetype.Size = new System.Drawing.Size(255, 22);
+            this.txtPasswordRetype.TabIndex = 67;
             // 
-            // bindingNavigatorMovePreviousItem
+            // txtStaffId
             // 
-            this.bindingNavigatorMovePreviousItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorMovePreviousItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMovePreviousItem.Image")));
-            this.bindingNavigatorMovePreviousItem.Name = "bindingNavigatorMovePreviousItem";
-            this.bindingNavigatorMovePreviousItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMovePreviousItem.Size = new System.Drawing.Size(29, 24);
-            this.bindingNavigatorMovePreviousItem.Text = "Move previous";
+            this.txtStaffId.Location = new System.Drawing.Point(178, 34);
+            this.txtStaffId.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtStaffId.Name = "txtStaffId";
+            this.txtStaffId.ReadOnly = true;
+            this.txtStaffId.Size = new System.Drawing.Size(255, 22);
+            this.txtStaffId.TabIndex = 69;
             // 
-            // bindingNavigatorSeparator
+            // lblStaffId
             // 
-            this.bindingNavigatorSeparator.Name = "bindingNavigatorSeparator";
-            this.bindingNavigatorSeparator.Size = new System.Drawing.Size(6, 27);
-            // 
-            // bindingNavigatorPositionItem
-            // 
-            this.bindingNavigatorPositionItem.AccessibleName = "Position";
-            this.bindingNavigatorPositionItem.AutoSize = false;
-            this.bindingNavigatorPositionItem.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.bindingNavigatorPositionItem.Name = "bindingNavigatorPositionItem";
-            this.bindingNavigatorPositionItem.Size = new System.Drawing.Size(49, 27);
-            this.bindingNavigatorPositionItem.Text = "0";
-            this.bindingNavigatorPositionItem.ToolTipText = "Current position";
-            // 
-            // bindingNavigatorSeparator1
-            // 
-            this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator1";
-            this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 27);
-            // 
-            // bindingNavigatorMoveNextItem
-            // 
-            this.bindingNavigatorMoveNextItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorMoveNextItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveNextItem.Image")));
-            this.bindingNavigatorMoveNextItem.Name = "bindingNavigatorMoveNextItem";
-            this.bindingNavigatorMoveNextItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveNextItem.Size = new System.Drawing.Size(29, 24);
-            this.bindingNavigatorMoveNextItem.Text = "Move next";
-            // 
-            // bindingNavigatorMoveLastItem
-            // 
-            this.bindingNavigatorMoveLastItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorMoveLastItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveLastItem.Image")));
-            this.bindingNavigatorMoveLastItem.Name = "bindingNavigatorMoveLastItem";
-            this.bindingNavigatorMoveLastItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveLastItem.Size = new System.Drawing.Size(29, 24);
-            this.bindingNavigatorMoveLastItem.Text = "Move last";
-            // 
-            // bindingNavigatorSeparator2
-            // 
-            this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator2";
-            this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 27);
-            // 
-            // staffBindingNavigatorSaveItem
-            // 
-            this.staffBindingNavigatorSaveItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.staffBindingNavigatorSaveItem.Image = ((System.Drawing.Image)(resources.GetObject("staffBindingNavigatorSaveItem.Image")));
-            this.staffBindingNavigatorSaveItem.Name = "staffBindingNavigatorSaveItem";
-            this.staffBindingNavigatorSaveItem.Size = new System.Drawing.Size(29, 24);
-            this.staffBindingNavigatorSaveItem.Text = "Save Data";
-            this.staffBindingNavigatorSaveItem.Click += new System.EventHandler(this.staffBindingNavigatorSaveItem_Click_1);
-            // 
-            // nameTextBox
-            // 
-            this.nameTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.staffBindingSource, "Name", true));
-            this.nameTextBox.Location = new System.Drawing.Point(204, 155);
-            this.nameTextBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.nameTextBox.Name = "nameTextBox";
-            this.nameTextBox.Size = new System.Drawing.Size(100, 22);
-            this.nameTextBox.TabIndex = 61;
-            // 
-            // addressTextBox
-            // 
-            this.addressTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.staffBindingSource, "Address", true));
-            this.addressTextBox.Location = new System.Drawing.Point(204, 209);
-            this.addressTextBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.addressTextBox.Name = "addressTextBox";
-            this.addressTextBox.Size = new System.Drawing.Size(100, 22);
-            this.addressTextBox.TabIndex = 62;
-            // 
-            // postcodeTextBox
-            // 
-            this.postcodeTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.staffBindingSource, "Postcode", true));
-            this.postcodeTextBox.Location = new System.Drawing.Point(204, 258);
-            this.postcodeTextBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.postcodeTextBox.Name = "postcodeTextBox";
-            this.postcodeTextBox.Size = new System.Drawing.Size(100, 22);
-            this.postcodeTextBox.TabIndex = 63;
-            // 
-            // phoneTextBox
-            // 
-            this.phoneTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.staffBindingSource, "Phone", true));
-            this.phoneTextBox.Location = new System.Drawing.Point(204, 308);
-            this.phoneTextBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.phoneTextBox.Name = "phoneTextBox";
-            this.phoneTextBox.Size = new System.Drawing.Size(100, 22);
-            this.phoneTextBox.TabIndex = 64;
-            // 
-            // dOBDateTimePicker
-            // 
-            this.dOBDateTimePicker.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.staffBindingSource, "DateOfBirth", true));
-            this.dOBDateTimePicker.Location = new System.Drawing.Point(204, 362);
-            this.dOBDateTimePicker.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.dOBDateTimePicker.Name = "dOBDateTimePicker";
-            this.dOBDateTimePicker.Size = new System.Drawing.Size(200, 22);
-            this.dOBDateTimePicker.TabIndex = 65;
-            // 
-            // passwordTextBox
-            // 
-            this.passwordTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.staffBindingSource, "Password", true));
-            this.passwordTextBox.Location = new System.Drawing.Point(204, 468);
-            this.passwordTextBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.passwordTextBox.Name = "passwordTextBox";
-            this.passwordTextBox.PasswordChar = '*';
-            this.passwordTextBox.Size = new System.Drawing.Size(100, 22);
-            this.passwordTextBox.TabIndex = 66;
-            // 
-            // staffDataGridView
-            // 
-            this.staffDataGridView.AutoGenerateColumns = false;
-            this.staffDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.staffDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.StaffId,
-            this.dataGridViewTextBoxColumn2,
-            this.dataGridViewTextBoxColumn3,
-            this.dataGridViewTextBoxColumn4,
-            this.dataGridViewTextBoxColumn5,
-            this.DateOfBirth,
-            this.dataGridViewTextBoxColumn7});
-            this.staffDataGridView.DataSource = this.staffBindingSource;
-            this.staffDataGridView.Location = new System.Drawing.Point(435, 151);
-            this.staffDataGridView.Margin = new System.Windows.Forms.Padding(4);
-            this.staffDataGridView.Name = "staffDataGridView";
-            this.staffDataGridView.RowHeadersWidth = 51;
-            this.staffDataGridView.Size = new System.Drawing.Size(1055, 388);
-            this.staffDataGridView.TabIndex = 66;
-            // 
-            // StaffId
-            // 
-            this.StaffId.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.StaffId.DataPropertyName = "StaffId";
-            this.StaffId.HeaderText = "StaffId";
-            this.StaffId.MinimumWidth = 6;
-            this.StaffId.Name = "StaffId";
-            this.StaffId.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn2
-            // 
-            this.dataGridViewTextBoxColumn2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.dataGridViewTextBoxColumn2.DataPropertyName = "Name";
-            this.dataGridViewTextBoxColumn2.HeaderText = "Name";
-            this.dataGridViewTextBoxColumn2.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            // 
-            // dataGridViewTextBoxColumn3
-            // 
-            this.dataGridViewTextBoxColumn3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.dataGridViewTextBoxColumn3.DataPropertyName = "Address";
-            this.dataGridViewTextBoxColumn3.HeaderText = "Address";
-            this.dataGridViewTextBoxColumn3.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            // 
-            // dataGridViewTextBoxColumn4
-            // 
-            this.dataGridViewTextBoxColumn4.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.dataGridViewTextBoxColumn4.DataPropertyName = "Postcode";
-            this.dataGridViewTextBoxColumn4.HeaderText = "Postcode";
-            this.dataGridViewTextBoxColumn4.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
-            // 
-            // dataGridViewTextBoxColumn5
-            // 
-            this.dataGridViewTextBoxColumn5.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.dataGridViewTextBoxColumn5.DataPropertyName = "Phone";
-            this.dataGridViewTextBoxColumn5.HeaderText = "Phone";
-            this.dataGridViewTextBoxColumn5.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
-            // 
-            // DateOfBirth
-            // 
-            this.DateOfBirth.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.DateOfBirth.DataPropertyName = "DateOfBirth";
-            this.DateOfBirth.HeaderText = "Date Of Birth";
-            this.DateOfBirth.MinimumWidth = 6;
-            this.DateOfBirth.Name = "DateOfBirth";
-            // 
-            // dataGridViewTextBoxColumn7
-            // 
-            this.dataGridViewTextBoxColumn7.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.dataGridViewTextBoxColumn7.DataPropertyName = "Password";
-            this.dataGridViewTextBoxColumn7.HeaderText = "Password";
-            this.dataGridViewTextBoxColumn7.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
-            this.dataGridViewTextBoxColumn7.ReadOnly = true;
-            // 
-            // reTypePasswordTextbox
-            // 
-            this.reTypePasswordTextbox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.staffBindingSource, "Password", true));
-            this.reTypePasswordTextbox.Location = new System.Drawing.Point(204, 532);
-            this.reTypePasswordTextbox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.reTypePasswordTextbox.Name = "reTypePasswordTextbox";
-            this.reTypePasswordTextbox.PasswordChar = '*';
-            this.reTypePasswordTextbox.Size = new System.Drawing.Size(100, 22);
-            this.reTypePasswordTextbox.TabIndex = 67;
-            // 
-            // staffTableAdapter
-            // 
-            this.staffTableAdapter.ClearBeforeFill = true;
-            // 
-            // tableAdapterManager
-            // 
-            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
-            this.tableAdapterManager.StaffTableAdapter = this.staffTableAdapter;
-            this.tableAdapterManager.UpdateOrder = BookingSystem.Database1DataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            this.lblStaffId.AutoSize = true;
+            this.lblStaffId.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblStaffId.Location = new System.Drawing.Point(30, 30);
+            this.lblStaffId.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblStaffId.Name = "lblStaffId";
+            this.lblStaffId.Size = new System.Drawing.Size(73, 25);
+            this.lblStaffId.TabIndex = 68;
+            this.lblStaffId.Text = "Staff Id";
             // 
             // frm_CreateStaff
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1509, 700);
-            this.Controls.Add(this.reTypePasswordTextbox);
-            this.Controls.Add(this.staffDataGridView);
-            this.Controls.Add(this.passwordTextBox);
-            this.Controls.Add(this.dOBDateTimePicker);
-            this.Controls.Add(this.phoneTextBox);
-            this.Controls.Add(this.postcodeTextBox);
-            this.Controls.Add(this.addressTextBox);
-            this.Controls.Add(this.nameTextBox);
-            this.Controls.Add(this.staffBindingNavigator);
+            this.ClientSize = new System.Drawing.Size(462, 543);
+            this.Controls.Add(this.txtStaffId);
+            this.Controls.Add(this.lblStaffId);
+            this.Controls.Add(this.txtPasswordRetype);
+            this.Controls.Add(this.txtPassword);
+            this.Controls.Add(this.dtpDateOfBirth);
+            this.Controls.Add(this.txtPhone);
+            this.Controls.Add(this.txtPostcode);
+            this.Controls.Add(this.txtAddress);
+            this.Controls.Add(this.txtName);
             this.Controls.Add(this.btn_Back);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.lbl_DOB);
@@ -503,19 +249,11 @@ namespace BookingSystem
             this.Controls.Add(this.lbl_Postcode);
             this.Controls.Add(this.lbl_Address);
             this.Controls.Add(this.btn_Enter);
-            this.Controls.Add(this.lbl_Login);
             this.Controls.Add(this.lbl_Password);
             this.Controls.Add(this.lbl_Name);
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frm_CreateStaff";
-            this.Text = "frm_CreateStaff";
-            this.Load += new System.EventHandler(this.frm_CreateStaff_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.staffBindingNavigator)).EndInit();
-            this.staffBindingNavigator.ResumeLayout(false);
-            this.staffBindingNavigator.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.staffBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.database1DataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.staffDataGridView)).EndInit();
+            this.Text = "Create Account";
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -528,41 +266,17 @@ namespace BookingSystem
         private System.Windows.Forms.Label lbl_Postcode;
         private System.Windows.Forms.Label lbl_Address;
         private System.Windows.Forms.Button btn_Enter;
-        private System.Windows.Forms.Label lbl_Login;
         private System.Windows.Forms.Label lbl_Password;
         private System.Windows.Forms.Label lbl_Name;
         private System.Windows.Forms.Button btn_Back;
-        private Database1DataSet database1DataSet;
-        private System.Windows.Forms.BindingSource staffBindingSource;
-        private Database1DataSetTableAdapters.StaffTableAdapter staffTableAdapter;
-        private Database1DataSetTableAdapters.TableAdapterManager tableAdapterManager;
-        private System.Windows.Forms.BindingNavigator staffBindingNavigator;
-        private System.Windows.Forms.ToolStripButton bindingNavigatorAddNewItem;
-        private System.Windows.Forms.ToolStripLabel bindingNavigatorCountItem;
-        private System.Windows.Forms.ToolStripButton bindingNavigatorDeleteItem;
-        private System.Windows.Forms.ToolStripButton bindingNavigatorMoveFirstItem;
-        private System.Windows.Forms.ToolStripButton bindingNavigatorMovePreviousItem;
-        private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator;
-        private System.Windows.Forms.ToolStripTextBox bindingNavigatorPositionItem;
-        private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator1;
-        private System.Windows.Forms.ToolStripButton bindingNavigatorMoveNextItem;
-        private System.Windows.Forms.ToolStripButton bindingNavigatorMoveLastItem;
-        private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator2;
-        private System.Windows.Forms.ToolStripButton staffBindingNavigatorSaveItem;
-        private System.Windows.Forms.TextBox nameTextBox;
-        private System.Windows.Forms.TextBox addressTextBox;
-        private System.Windows.Forms.TextBox postcodeTextBox;
-        private System.Windows.Forms.TextBox phoneTextBox;
-        private System.Windows.Forms.DateTimePicker dOBDateTimePicker;
-        private System.Windows.Forms.TextBox passwordTextBox;
-        private System.Windows.Forms.DataGridView staffDataGridView;
-        private System.Windows.Forms.TextBox reTypePasswordTextbox;
-        private System.Windows.Forms.DataGridViewTextBoxColumn StaffId;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
-        private System.Windows.Forms.DataGridViewTextBoxColumn DateOfBirth;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
+        private System.Windows.Forms.TextBox txtName;
+        private System.Windows.Forms.TextBox txtAddress;
+        private System.Windows.Forms.TextBox txtPostcode;
+        private System.Windows.Forms.TextBox txtPhone;
+        private System.Windows.Forms.DateTimePicker dtpDateOfBirth;
+        private System.Windows.Forms.TextBox txtPassword;
+        private System.Windows.Forms.TextBox txtPasswordRetype;
+        private System.Windows.Forms.TextBox txtStaffId;
+        private System.Windows.Forms.Label lblStaffId;
     }
 }
