@@ -54,7 +54,7 @@ namespace BookingSystem.Database
         }
 
         private string postcode;
-
+        [MapperAtrribute(HeaderName = "Postcode")]
         public string Postcode
         {
             get { return postcode; }
@@ -62,7 +62,7 @@ namespace BookingSystem.Database
         }
 
         private string phone;
-
+        [MapperAtrribute(HeaderName = "Phone")]
         public string Phone
         {
             get { return phone; }
@@ -70,7 +70,7 @@ namespace BookingSystem.Database
         }
 
         private string password;
-
+        [MapperAtrribute(HeaderName = "Password")]
         public string Password
         {
             get { return password; }
@@ -78,7 +78,7 @@ namespace BookingSystem.Database
         }
 
         private DateTime dateOfBirth;
-
+        [MapperAtrribute(HeaderName = "DateOfBirth")]
         public DateTime DateOfBirth
         {
             get { return dateOfBirth; }
@@ -102,7 +102,7 @@ namespace BookingSystem.Database
                         command.Parameters.AddWithValue("@paramPostcode", Postcode);
                         command.Parameters.AddWithValue("@paramPhone", Phone);
                         command.Parameters.AddWithValue("@paramDateOfBirth", DateOfBirth);
-                        command.Parameters.AddWithValue("@paramPassword", Password.Encrypt());
+                        command.Parameters.AddWithValue("@paramPassword", Password);
 
                         int ret = command.ExecuteNonQuery();
 

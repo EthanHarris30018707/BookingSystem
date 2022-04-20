@@ -11,7 +11,7 @@ namespace BookingSystem.Database
     public class Student: BindableBase
     {
 
-        private static List<Student> students;
+        private static List<Student> students= new List<Student>();
         public static List<Student> Students
         {
             get
@@ -29,12 +29,12 @@ namespace BookingSystem.Database
         }
 
 
-        private string studentId;
-        [MapperAtrribute(HeaderName = "StudentId")]
-        public string StudentId
+        private string studentNumber;
+        [MapperAtrribute(HeaderName = "StudentNumber")]
+        public string StudentNumber
         {
-            get { return studentId; }
-            set {SetProperty(ref studentId, value); }
+            get { return studentNumber; }
+            set {SetProperty(ref studentNumber, value); }
         }
 
         private string name;
@@ -54,7 +54,7 @@ namespace BookingSystem.Database
         }
 
         private string postcode;
-
+        [MapperAtrribute(HeaderName = "Postcode")]
         public string Postcode
         {
             get { return postcode; }
@@ -62,7 +62,7 @@ namespace BookingSystem.Database
         }
 
         private string phone;
-
+        [MapperAtrribute(HeaderName = "Phone")]
         public string Phone
         {
             get { return phone; }
@@ -70,7 +70,7 @@ namespace BookingSystem.Database
         }
 
         private string password;
-
+        [MapperAtrribute(HeaderName = "Password")]
         public string Password
         {
             get { return password; }
@@ -78,12 +78,21 @@ namespace BookingSystem.Database
         }
 
         private DateTime dateOfBirth;
-
+        [MapperAtrribute(HeaderName = "DateOfBirth")]
         public DateTime DateOfBirth
         {
             get { return dateOfBirth; }
             set {SetProperty(ref dateOfBirth, value); }
         }
+
+        private string emailAddress;
+        [MapperAtrribute(HeaderName = "EmailAddress")]
+        public string EmailAddress
+        {
+            get { return emailAddress; }
+            set {SetProperty(ref emailAddress, value); }
+        }
+
 
         public bool Save()
         {
@@ -96,20 +105,26 @@ namespace BookingSystem.Database
                     using (SqlCommand command = new SqlCommand("procedureCreateStudent", connection))
                     {
                         command.CommandType = System.Data.CommandType.StoredProcedure;
-                        command.Parameters.AddWithValue("@paramStudentId", StudentId);
+                        command.Parameters.AddWithValue("@paramStudentNumber", StudentNumber);
                         command.Parameters.AddWithValue("@paramName",  Name);
                         command.Parameters.AddWithValue("@paramAddress", Address);
                         command.Parameters.AddWithValue("@paramPostcode", Postcode);
                         command.Parameters.AddWithValue("@paramPhone", Phone);
                         command.Parameters.AddWithValue("@paramDateOfBirth", DateOfBirth);
-                        command.Parameters.AddWithValue("@paramPassword", Password.Encrypt());
+                        command.Parameters.AddWithValue("@paramPassword", Password);
+                        command.Parameters.AddWithValue("@paramEmailAddress", EmailAddress);
 
-                        int ret = (int)command.ExecuteScalar();
+                        int ret = (int)command.ExecuteNonQuery();
+                        //If successful, add new student to list of students
+                        if (ret == 1)
+                        {
+                            Students.Add(this);
+                        }
                         return ret == 1;
                     }
                 }
             }
-            catch 
+            catch(Exception ex) 
             {
                 return false;
             }

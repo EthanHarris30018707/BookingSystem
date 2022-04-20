@@ -59,14 +59,24 @@ namespace BookingSystem
         public static string GeneratedNextStaffId()
         {
             int id = Staff.Staffs.Count + 1;
-            while(Staff.Staffs.Where(s=> s.StaffId == id.NumbertoStaffId()).FirstOrDefault() != null)
+            while(Staff.Staffs.Where(s=> s.StaffId == id.NumbertoId()).FirstOrDefault() != null)
             {
                 id++;
             }
-            return id.NumbertoStaffId();
+            return id.NumbertoId();
+        }
+        //Generate the next available student number
+        public static string GeneratedNextStudentNumber()
+        {
+            int id = Student.Students.Count + 1;
+            while (Student.Students.Where(s => s.StudentNumber == id.NumbertoId()).FirstOrDefault() != null)
+            {
+                id++;
+            }
+            return id.NumbertoId();
         }
 
-        private static string NumbertoStaffId(this int number)
+        private static string NumbertoId(this int number)
         {
             string newID = (number).ToString();
             while (newID.Length < 10)

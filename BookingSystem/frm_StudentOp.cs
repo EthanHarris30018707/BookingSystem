@@ -1,4 +1,6 @@
-﻿using System;
+﻿using BookingSystem.Database;
+using BookingSystem.Logon;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,6 +14,16 @@ namespace BookingSystem
 {
     public partial class frm_StudentOp : Form
     {
+        private const int CP_NOCLOSE_BUTTON = 0x200;
+        protected override CreateParams CreateParams
+        {
+            get
+            {
+                CreateParams myCp = base.CreateParams;
+                myCp.ClassStyle = myCp.ClassStyle | CP_NOCLOSE_BUTTON;
+                return myCp;
+            }
+        }
         public frm_StudentOp()
         {
             InitializeComponent();
@@ -26,23 +38,23 @@ namespace BookingSystem
 
         private void btn_Login_Click(object sender, EventArgs e)
         {
-            if (txt_Name.Text == "Admin")
+            //Get the staff with the enterred username
+            Student enteredStudent = Student.Students.Where((s) => s.StudentNumber == txtStudentNumber.Text).FirstOrDefault();
+            if (enteredStudent == null)
             {
-                if (txt_Password.Text == "Admin")
-                {
-                    new frm_StudentMenu().Show();
-                    this.Close();
-                }
-                else
-                {
-                    MessageBox.Show("Error; Please enter the correct Information");
-
-                }
-
+                MessageBox.Show("Student with enterred number does not exist. Please try again", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            if (txtPassword.Text.Encrypt() == enteredStudent.Password)
+            {
+                //Correct credentials enterred. Save logon information in cookie
+                Cookie.Instance.LoggedStudent = enteredStudent;
+                (new frm_StudentMenu()).Show();
+                this.Close();
             }
             else
             {
-                MessageBox.Show("Error;Please enter the correct Information");
+                MessageBox.Show("Incorrect username and/or password enterred. Please try again", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 

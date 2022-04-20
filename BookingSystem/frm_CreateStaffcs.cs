@@ -51,12 +51,6 @@ namespace BookingSystem
 
         private void btn_Enter_Click(object sender, EventArgs e)
         {
-            int error = ValidateInformation();
-            if (error != Constants.NO_ERROR)
-            {
-                MessageBox.Show($"{error.ErrorToMessage()}. Please correct and try again.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
-            }
             //Create the staff
             Staff staff = new Staff()
             {
@@ -80,5 +74,31 @@ namespace BookingSystem
             }
         }
 
+        private void txt_TextChanged(object sender, EventArgs e)
+        {
+            UpdateStatus();
+        }
+
+        private void UpdateStatus()
+        {
+            //Enabled the create button if all valid information have been enterered
+            int informationCode = ValidateInformation();
+            btnCreate.Enabled = informationCode == 0;
+            if (informationCode == 0)
+            {
+                lblInformation.Text = "Information valid";
+                lblInformation.ForeColor = Color.DarkGreen;
+            }
+            else
+            {
+                lblInformation.Text = informationCode.ErrorToMessage();
+                lblInformation.ForeColor = Color.DarkRed;
+            }
+        }
+
+        private void dtpDateOfBirth_ValueChanged(object sender, EventArgs e)
+        {
+            UpdateStatus();
+        }
     }
 }
