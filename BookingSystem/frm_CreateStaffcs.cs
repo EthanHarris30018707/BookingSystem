@@ -21,8 +21,7 @@ namespace BookingSystem
 
         private void btn_Back_Click(object sender, EventArgs e)
         {
-            frm_StaffMain frm_StaffMain = new frm_StaffMain();
-            frm_StaffMain.Show();
+            (new frm_StaffMain()).Show();
             this.Close();
         }
 
@@ -71,7 +70,8 @@ namespace BookingSystem
             };
             if(staff.Save())
             {
-                MessageBox.Show($"{staff} successfully saved", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show($"{staff} account successfully created", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                (new frm_StaffMain()).Show();
                 this.Close();
             }
             else

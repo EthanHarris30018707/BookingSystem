@@ -104,7 +104,13 @@ namespace BookingSystem.Database
                         command.Parameters.AddWithValue("@paramDateOfBirth", DateOfBirth);
                         command.Parameters.AddWithValue("@paramPassword", Password.Encrypt());
 
-                        int ret = (int)command.ExecuteScalar();
+                        int ret = command.ExecuteNonQuery();
+
+                        //If successful, add new staff to list of staffs
+                        if(ret == 1)
+                        {
+                            Staffs.Add(this);
+                        }
                         return ret == 1;
                     }
                 }
