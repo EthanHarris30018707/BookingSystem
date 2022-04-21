@@ -10,7 +10,6 @@ namespace BookingSystem.Database
 {
     public class Staff: BindableBase
     {
-
         private static List<Staff> staffs = new List<Staff>();
         public static List<Staff> Staffs
         {
@@ -27,7 +26,6 @@ namespace BookingSystem.Database
         {
             return Mapper.Fetch<Staff>("SELECT * FROM Staff", Constants.CONNECTION_STRING, System.Data.CommandType.Text);
         }
-
 
         private string staffId;
         [MapperAtrribute(HeaderName = "StaffId")]

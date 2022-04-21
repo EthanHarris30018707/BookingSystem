@@ -10,7 +10,6 @@ namespace BookingSystem.Database
 {
     public class Student: BindableBase
     {
-
         private static List<Student> students= new List<Student>();
         public static List<Student> Students
         {
