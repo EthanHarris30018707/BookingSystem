@@ -36,14 +36,17 @@ namespace BookingSystem
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.form1logo = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.form1logo)).BeginInit();
             this.SuspendLayout();
             // 
             // btn_Student
             // 
-            this.btn_Student.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Student.Location = new System.Drawing.Point(322, 164);
+            this.btn_Student.Font = new System.Drawing.Font("MV Boli", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Student.Location = new System.Drawing.Point(483, 285);
+            this.btn_Student.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btn_Student.Name = "btn_Student";
-            this.btn_Student.Size = new System.Drawing.Size(170, 140);
+            this.btn_Student.Size = new System.Drawing.Size(255, 215);
             this.btn_Student.TabIndex = 1;
             this.btn_Student.Text = "Student";
             this.btn_Student.UseVisualStyleBackColor = true;
@@ -52,20 +55,21 @@ namespace BookingSystem
             // lbl_USWBookings
             // 
             this.lbl_USWBookings.AutoSize = true;
-            this.lbl_USWBookings.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_USWBookings.Location = new System.Drawing.Point(161, 53);
+            this.lbl_USWBookings.Font = new System.Drawing.Font("MV Boli", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_USWBookings.Location = new System.Drawing.Point(379, 252);
+            this.lbl_USWBookings.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_USWBookings.Name = "lbl_USWBookings";
-            this.lbl_USWBookings.Size = new System.Drawing.Size(196, 31);
+            this.lbl_USWBookings.Size = new System.Drawing.Size(0, 31);
             this.lbl_USWBookings.TabIndex = 2;
-            this.lbl_USWBookings.Text = "USW Bookings";
             this.lbl_USWBookings.Click += new System.EventHandler(this.lbl_USWBookings_Click);
             // 
             // btn_Staff
             // 
-            this.btn_Staff.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Staff.Location = new System.Drawing.Point(37, 164);
+            this.btn_Staff.Font = new System.Drawing.Font("MV Boli", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Staff.Location = new System.Drawing.Point(58, 285);
+            this.btn_Staff.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btn_Staff.Name = "btn_Staff";
-            this.btn_Staff.Size = new System.Drawing.Size(170, 140);
+            this.btn_Staff.Size = new System.Drawing.Size(255, 215);
             this.btn_Staff.TabIndex = 3;
             this.btn_Staff.Text = "Staff";
             this.btn_Staff.UseVisualStyleBackColor = true;
@@ -74,20 +78,20 @@ namespace BookingSystem
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(242, 329);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Font = new System.Drawing.Font("MV Boli", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(363, 549);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(35, 13);
+            this.label1.Size = new System.Drawing.Size(73, 31);
             this.label1.TabIndex = 4;
             this.label1.Text = "label1";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(242, 367);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Font = new System.Drawing.Font("MV Boli", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(363, 610);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(35, 13);
+            this.label2.Size = new System.Drawing.Size(79, 31);
             this.label2.TabIndex = 5;
             this.label2.Text = "label2";
             // 
@@ -95,19 +99,33 @@ namespace BookingSystem
             // 
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
+            // form1logo
+            // 
+            this.form1logo.Image = global::BookingSystem.Properties.Resources.Books_SW_Logo;
+            this.form1logo.Location = new System.Drawing.Point(94, 52);
+            this.form1logo.Name = "form1logo";
+            this.form1logo.Size = new System.Drawing.Size(620, 192);
+            this.form1logo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.form1logo.TabIndex = 6;
+            this.form1logo.TabStop = false;
+            // 
             // frm_Main
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(536, 429);
+            this.BackColor = System.Drawing.SystemColors.Control;
+            this.ClientSize = new System.Drawing.Size(804, 660);
+            this.Controls.Add(this.form1logo);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btn_Staff);
             this.Controls.Add(this.lbl_USWBookings);
             this.Controls.Add(this.btn_Student);
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "frm_Main";
             this.Text = "Main";
             this.Load += new System.EventHandler(this.frm_Main_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.form1logo)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -121,6 +139,7 @@ namespace BookingSystem
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.PictureBox form1logo;
     }
 }
 

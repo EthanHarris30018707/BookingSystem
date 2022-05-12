@@ -62,5 +62,10 @@ namespace BookingSystem
         {
 
         }
+
+        private void stafflogo_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

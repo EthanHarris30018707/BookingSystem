@@ -49,6 +49,7 @@ namespace BookingSystem
             {
                 //Correct credentials enterred. Save logon information in cookie
                 Cookie.Instance.LoggedStudent = enteredStudent;
+
                 (new frm_StudentMenu()).Show();
                 this.Close();
             }
