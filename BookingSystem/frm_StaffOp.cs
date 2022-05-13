@@ -29,7 +29,7 @@ namespace BookingSystem
             InitializeComponent();
         }
 
-        private void btn_Login_Click(object sender, EventArgs e)
+        private void btn_Login_Click(object sender, EventArgs e)    //0000000001 Password123
         {
             //Get the staff with the enterred username
             Staff enteredStaff = Staff.Staffs.Where((s) => s.StaffId == txt_StaffId.Text).FirstOrDefault();
