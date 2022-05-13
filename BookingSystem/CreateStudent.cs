@@ -25,7 +25,7 @@ namespace BookingSystem
             this.Close();
         }
 
-        private int ValidateInformation()
+        public int ValidateInformation()
         {
             //Phone number should be length of 11 and convertible to int
             if (txtPhone.Text.Length != 11 && !int.TryParse(txtPhone.Text, out _))
@@ -86,7 +86,7 @@ namespace BookingSystem
             UpdateStatus();
         }
 
-        private void UpdateStatus()
+        public void UpdateStatus()
         {
             //Enabled the create button if all valid information have been enterered
             int informationCode = ValidateInformation();

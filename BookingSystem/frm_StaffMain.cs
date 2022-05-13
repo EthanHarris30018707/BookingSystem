@@ -39,5 +39,10 @@ namespace BookingSystem
             frm_CreateStaff.Show();
             this.Hide();
         }
+
+        private void frm_StaffMain_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
